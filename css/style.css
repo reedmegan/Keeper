@@ -1,0 +1,66 @@
+html, body {
+  overflow-x:hidden;
+}
+body {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  color: #1A4C6D;
+}
+h1, h2, h3, h4, h5, h6 {
+     font-family: 'Comfortaa', Helvetica, Arial, sans-serif; 
+}
+h1 {
+  font-size: 85px;
+  font-weight: bold;
+  line-height: 106px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 80px;
+  color: #1A4C6D;
+  margin-bottom: 5px;
+}
+h3 {
+  font-size: 32px;
+  line-height: 41px;
+  font-weight: bold;
+  color: #3498D9;
+  margin-bottom: 5px;
+}
+h4 {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: thin;
+}
+
+p {
+  font-size: 23px;
+  line-height: 29px;
+  font-weight: normal;
+}
+
+/* GRID */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+.container:after {
+  clear:both;
+}
+.one-half, . one-third, .one-fourth {
+  width: 96%
+  float: left;
+  position: relative;
+  min-height: 1px;
+  margin: 0 2% 20px;
+}
