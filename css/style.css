@@ -89,6 +89,7 @@ p {
   }
 }
 
+
 /* HEADER */
 header {
   color: #FFFFFF
@@ -139,6 +140,22 @@ header nav ul > li.btn.outline:hover > a {
    display: block;
    margin:3em auto 0;
  }
+
+@media (min-width: 315px) {
+  .hero {
+    width: 600px;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    width: 1024px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero {
+    width: 1600px;
+  }
+}
 
  /* BUTTONS */
  .btn {
