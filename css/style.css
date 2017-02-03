@@ -36,26 +36,13 @@ html, body{
    clear: both;
  }
  .one-half, .one-third, .one-fourth {
-   width:96%;
+   width:89%;
    float:left;
    position:relative;
    min-height: 1px;
    margin:0 2% 20px;
  }
 
- @media (min-width: 400px) {
-   .container {
-     width: 380p;
-   }
-   .hero img {
-      width: 85%;
-   }
-   
-  @media (min-width: 600px) {
-   .container {
-     width: 580px;
-   }
- }
   @media (min-width: 768px) {
    .container {
      width: 750px;
@@ -64,11 +51,6 @@ html, body{
  @media (min-width: 992px) {
    .container {
      width: 970px;
-   }
- }
- @media (min-width: 1200px) {
-   .container {
-     width: 1170px;
    }
    .one-half {
      width:46%;
@@ -80,7 +62,12 @@ html, body{
      width:21%;
    }
  }
-
+ @media (min-width: 1200px) {
+   .container {
+     width: 1170px;
+   }
+ }
+  
 /* HEADER */
  header {
    color:#FFFFFF;
