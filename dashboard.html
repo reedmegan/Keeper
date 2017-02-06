@@ -14,7 +14,7 @@
  <link rel="stylesheet" href="css/style.css">
  <link rel="stylesheet" href="css/font-awesome.css">
  <link rel="stylesheet" href="animate.css">
- <link rel="stylesheet" href="dropit.css">
+ <link rel="stylesheet" href="css/dropit.css">
  
 </head>
 
@@ -42,17 +42,23 @@
         <div class="settings">
           <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg">
           <p>Joey Kirk</p>
-          <a href="#"><i class="fa fa-cog"></i></a>
+          <ul class="menu pop-north dropit">
+            <li class="dropit-trigger dropit-open"><a href="#" class="settings-btn"><i class="fa fa-cog"</i></a>
+              <ul class="drop-it submenu" style>
+                  <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                  <li><a href="#"><i class="fa fa-group"></i> Collaborators</a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
     </div>
    </nav>
-
    <main role="main">
    <!-- Content -->
    <section class="content">
      <div class="container">
        <div class="header">
          <h1>All Items</h1>
-         <a href="#" class="btn">+ Add</a>
          <ul class="menu">
             <li>
               <a href="#" class="btn">+ Add</a>
@@ -97,8 +103,8 @@
        </div>
        <div class="content-item">
          <div class="item-box">
+         <img src="http://41.media.tumblr.com/0390d80d6c8cc4a7096033182a4bfe8a/tumblr_ndyvukSjNl1tubinno1_1280.jpg">
          </div>
-          <img src="http://41.media.tumblr.com/0390d80d6c8cc4a7096033182a4bfe8a/tumblr_ndyvukSjNl1tubinno1_1280.jpg">
        </div>
        <div class="content-item">
          <div class="item-box">
@@ -114,14 +120,14 @@
        </div>
        <div class="content-item">
          <div class="item-box">
-         </div>
           <img src="http://41.media.tumblr.com/fddb3f2b0bdf390efd7ea87372e75fa5/tumblr_ndyg3pYbKW1tubinno1_1280.jpg">
+         </div>
        </div>
        <div class="content-item">
          <div class="item-box">
-         </div>
-         <h2><a href="#">Why storing inspiration is great</a></h2>
+          <h2><a href="#">Why storing inspiration is great</a></h2>
          <p>Keeper is a new tool to help collect and store your inspiration and information. From images, to links, to notes like this one, you can keep track of all your favorite things.</p>
+         </div>
        </div>
      </div>
    </section>
@@ -129,9 +135,12 @@
  <script src="js/jquery-3.1.1.min.js"></script>
  <script src="js/dropit.js"></script>
  <script type="text/javascript">
+  $(document).ready(function () {
   $(".menu").dropit();
-  $(".menu").click(function() {
+  $(".hamburger").click(function() {
     $("left-nav").toggleClass("open", 200);
+});
+
   });
 </script>
  </body>
