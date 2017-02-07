@@ -36,7 +36,15 @@ html, body{
  .container:after {
    clear: both;
  }
- .one-half, .one-third, .one-fourth {
+ .one-half {
+   width: 46%;
+   float: left;
+   position: relative;
+   min-height: 1px;
+   margin: 0, 2% 40px;
+ }
+
+ .one-third, .one-fourth {
    width:96%;
    float:left;
    position:relative;
@@ -54,9 +62,6 @@ html, body{
    .container {
      width: 750px;
    }
-   .one-half {
-     width:46%;
-   }
    .one-third {
      width:29.33333%;
    }
@@ -71,9 +76,6 @@ html, body{
  @media (min-width: 992px) {
    .container {
      width: 970px;
-   }
-    .one-half {
-     width:46%;
    }
    .one-third {
      width:29.33333%;
@@ -90,6 +92,11 @@ html, body{
  @media (min-width: 1200px) {
    .container {
      width: 1170px;
+   }
+ }
+ @media (min-width: 1920px) {
+   .container {
+     width: 1800px;
    }
  }
   
@@ -112,7 +119,8 @@ html, body{
  header nav ul > li {
    list-style-type: none;
    display: inline-block;
-   margin:0 15px;
+   margin:0;
+   padding: 15px;
  }
  header nav ul > li.btn-outline {
    padding:10px 15px;
@@ -138,7 +146,6 @@ html, body{
    font-size:50px;
    font-weight: normal;
    margin:95px 0 0;
-   animation-name: fadeIn;
  }
  header .hero p {
    font-size: 22px;
@@ -379,6 +386,7 @@ html, body{
    font-weight:100;
    text-align: center;
    margin: 10px auto 0;
+   padding:0;
  }
  footer nav ul li {
    list-style-type: none;
@@ -388,39 +396,40 @@ html, body{
    color:#FFFFFF;
    text-decoration: none;
  }
- footer .right-footer-block {
-   background-color: transparent;
- }
  footer .logo {
-   padding: 2em 0 2em 15em;
+   padding: 2em 0;
    margin: 0 auto;
    display: block;
+   width: 90px;
  }
-
-  @media (min-width: 400px){
-   footer {
-     height: 100px;
-      }
-   footer p, footer nav ul{
-     padding: 2em 0;
-     text-align: left;
-   }
-   footer .right-footer-block {
-     background-color: #3498DB;
-   }
-   footer .logo{
-     padding: 2em 0 2em 4em;
-   }  
+ footer .one-third {
+   width: 96%;
+   min-height: 1px;
+   margin: 0 2% 0px;
  }
 
   @media (min-width: 768px){
+   footer .one-third {
+    width: 96%;
+    min-height: 1px;
+    margin: 0 2% 0px;
+    }
+  }
+  @media (min-width: 992px){
    footer {
      background-color: #3498DB;
      background-image: linear-gradient(to left,
-        #3498DB 0%, #3498DB 33.33337%, #34495E 33.33337%, #34495E 33.33337%);
+        #3498DB 0%, #3498DB 33.33337%, #34495E 33.33337%, #34495E 100%);
      height: 100px;
-      }
-   footer p, footer nav ul{
+  }
+  footer .one-third {
+    width:29.33333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    margin: 0 2% 20px;
+  }
+  footer p, footer nav ul{
      padding: 2em 0;
      text-align: left;
    }
@@ -428,9 +437,11 @@ html, body{
      background-color: #3498DB;
    }
    footer .logo{
-     padding: 2em 0 2em 4em;
-   }  
- }
+     padding: 1.5em 0 10em 8em;
+     margin-bottom:10px;
+     width:110px;
+   }
+}
 
  .dashboard {
    background:#F7F7F7;
@@ -575,10 +586,7 @@ html, body{
  .left-nav .settings a {
    color:#FFFFFF;
    text-decoration: none;
-   text-align: right;
-   float: left;
-   margin-right:10px;
-   margin-top:8px;
+   text-align: left;
  }
 .left-nav .settings .settings-btn {
         color: #FFFFFF;
